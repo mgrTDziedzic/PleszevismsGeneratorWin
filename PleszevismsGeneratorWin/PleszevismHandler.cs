@@ -22,8 +22,7 @@ namespace PleszevismsGeneratorWin
                 catch
                 {
                     return null;
-                }
-                
+                }                
             }
         }
 
