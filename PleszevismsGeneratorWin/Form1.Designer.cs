@@ -41,6 +41,8 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.plikToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.openToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.everydayClipboard = new System.Windows.Forms.Button();
+            this.pleszetonClipboard = new System.Windows.Forms.Button();
             this.everydayGroupBox.SuspendLayout();
             this.pleszetonGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.felietonLength)).BeginInit();
@@ -50,6 +52,7 @@
             // everydayGroupBox
             // 
             this.everydayGroupBox.AutoSize = true;
+            this.everydayGroupBox.Controls.Add(this.everydayClipboard);
             this.everydayGroupBox.Controls.Add(this.everydayButton);
             this.everydayGroupBox.Controls.Add(this.everydayTextBox);
             this.everydayGroupBox.Location = new System.Drawing.Point(12, 72);
@@ -81,6 +84,7 @@
             // pleszetonGroupBox
             // 
             this.pleszetonGroupBox.AutoSize = true;
+            this.pleszetonGroupBox.Controls.Add(this.pleszetonClipboard);
             this.pleszetonGroupBox.Controls.Add(this.uniqueCheckBox);
             this.pleszetonGroupBox.Controls.Add(this.lengthLabel);
             this.pleszetonGroupBox.Controls.Add(this.felietonLength);
@@ -184,6 +188,26 @@
             this.openToolStripMenuItem.Text = "Otwórz...";
             this.openToolStripMenuItem.Click += new System.EventHandler(this.openToolStripMenuItem_Click);
             // 
+            // everydayClipboard
+            // 
+            this.everydayClipboard.Location = new System.Drawing.Point(8, 92);
+            this.everydayClipboard.Name = "everydayClipboard";
+            this.everydayClipboard.Size = new System.Drawing.Size(110, 23);
+            this.everydayClipboard.TabIndex = 2;
+            this.everydayClipboard.Text = "Kopiuj do schowka";
+            this.everydayClipboard.UseVisualStyleBackColor = true;
+            this.everydayClipboard.Click += new System.EventHandler(this.everydayClipboard_Click);
+            // 
+            // pleszetonClipboard
+            // 
+            this.pleszetonClipboard.Location = new System.Drawing.Point(8, 412);
+            this.pleszetonClipboard.Name = "pleszetonClipboard";
+            this.pleszetonClipboard.Size = new System.Drawing.Size(110, 23);
+            this.pleszetonClipboard.TabIndex = 6;
+            this.pleszetonClipboard.Text = "Kopiuj do schowka";
+            this.pleszetonClipboard.UseVisualStyleBackColor = true;
+            this.pleszetonClipboard.Click += new System.EventHandler(this.pleszetonClipboard_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -221,6 +245,8 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem plikToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem openToolStripMenuItem;
+        private System.Windows.Forms.Button everydayClipboard;
+        private System.Windows.Forms.Button pleszetonClipboard;
     }
 }
 

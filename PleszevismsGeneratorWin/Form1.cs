@@ -83,5 +83,15 @@ namespace PleszevismsGeneratorWin
 
             }
         }
+
+        private void everydayClipboard_Click(object sender, EventArgs e)
+        {
+            Clipboard.SetText(everydayTextBox.Text);
+        }
+
+        private void pleszetonClipboard_Click(object sender, EventArgs e)
+        {
+            Clipboard.SetText(felietonTextBox.Text);
+        }
     }
 }
