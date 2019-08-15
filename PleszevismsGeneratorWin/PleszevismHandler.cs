@@ -28,7 +28,7 @@ namespace PleszevismsGeneratorWin
 
         public void Serialize(Pleszevism pleszevism)
         {
-            string PleszevismFile = Path.GetFullPath("Pleszevism.xml");
+            string PleszevismFile = Path.GetFullPath("Pleszevism2.xml");
 
             if (File.Exists(PleszevismFile))
             {

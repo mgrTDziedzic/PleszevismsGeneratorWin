@@ -26,7 +26,7 @@ namespace PleszevismsGeneratorWin
             string PleszevismFile = Path.GetFullPath("Pleszevism.xml");
             if (File.Exists(PleszevismFile))
             {
-                pleszevism = pleszevismHandler.LoadFromFile(PleszevismFile);
+                pleszevism = pleszevismHandler.LoadFromFile(PleszevismFile);                
             }
             else
             {
@@ -49,7 +49,7 @@ namespace PleszevismsGeneratorWin
         private void openToolStripMenuItem_Click(object sender, EventArgs e)
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();
-            openFileDialog.Filter = "Pliki pleszewizmów (*.xml)|*.xml";
+            openFileDialog.Filter = "Pliki bazy tekstów (*.xml)|*.xml";
             DialogResult result = openFileDialog.ShowDialog();
             if (result == DialogResult.OK)
             {
@@ -58,7 +58,7 @@ namespace PleszevismsGeneratorWin
 
             if (pleszevism == null)
             {
-                MessageBox.Show("Nie udało się wczytać bazy pleszewizmów. Upewnij się, że wybrałeś poprawny plik");
+                MessageBox.Show("Nie udało się wczytać bazy tekstów. Upewnij się, że wybrałeś poprawny plik");
             }
             UpdateControls();
         }
@@ -67,13 +67,20 @@ namespace PleszevismsGeneratorWin
         {
             if (pleszevism == null)
             {
-                everydayButton.Enabled = false;
-                felietonButton.Enabled = false;
+                headerLabel.Text = "Nie wczytano pliku!";
+                everydayGroupBox.Text = "";
+                pleszetonGroupBox.Text = "";
+                everydayGroupBox.Enabled = false;
+                pleszetonGroupBox.Enabled = false;
             }
             else
             {
-                everydayButton.Enabled = true;
-                felietonButton.Enabled = true;
+                headerLabel.Text = "Wygeneruj sobie:";
+                everydayGroupBox.Text = pleszevism.SingleText;
+                pleszetonGroupBox.Text = pleszevism.MultiText;
+                everydayGroupBox.Enabled = true;
+                pleszetonGroupBox.Enabled = true;
+
             }
         }
     }

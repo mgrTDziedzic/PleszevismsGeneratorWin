@@ -37,7 +37,7 @@
             this.felietonLength = new System.Windows.Forms.NumericUpDown();
             this.felietonButton = new System.Windows.Forms.Button();
             this.felietonTextBox = new System.Windows.Forms.RichTextBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.headerLabel = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.plikToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.openToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -57,7 +57,6 @@
             this.everydayGroupBox.Size = new System.Drawing.Size(504, 134);
             this.everydayGroupBox.TabIndex = 0;
             this.everydayGroupBox.TabStop = false;
-            this.everydayGroupBox.Text = "Pleszewizm na każdy dzień";
             // 
             // everydayButton
             // 
@@ -92,7 +91,6 @@
             this.pleszetonGroupBox.Size = new System.Drawing.Size(504, 466);
             this.pleszetonGroupBox.TabIndex = 1;
             this.pleszetonGroupBox.TabStop = false;
-            this.pleszetonGroupBox.Text = "Soczysty pleszeton";
             // 
             // uniqueCheckBox
             // 
@@ -116,9 +114,19 @@
             // felietonLength
             // 
             this.felietonLength.Location = new System.Drawing.Point(374, 410);
+            this.felietonLength.Minimum = new decimal(new int[] {
+            2,
+            0,
+            0,
+            0});
             this.felietonLength.Name = "felietonLength";
             this.felietonLength.Size = new System.Drawing.Size(42, 20);
             this.felietonLength.TabIndex = 3;
+            this.felietonLength.Value = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
             // 
             // felietonButton
             // 
@@ -140,15 +148,15 @@
             this.felietonTextBox.TabIndex = 0;
             this.felietonTextBox.Text = "";
             // 
-            // label1
+            // headerLabel
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Gabriola", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label1.Location = new System.Drawing.Point(12, 24);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(161, 45);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Wygeneruj sobie:";
+            this.headerLabel.AutoSize = true;
+            this.headerLabel.Font = new System.Drawing.Font("Gabriola", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.headerLabel.Location = new System.Drawing.Point(12, 24);
+            this.headerLabel.Name = "headerLabel";
+            this.headerLabel.Size = new System.Drawing.Size(161, 45);
+            this.headerLabel.TabIndex = 2;
+            this.headerLabel.Text = "Wygeneruj sobie:";
             // 
             // menuStrip1
             // 
@@ -181,7 +189,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(528, 672);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.headerLabel);
             this.Controls.Add(this.pleszetonGroupBox);
             this.Controls.Add(this.everydayGroupBox);
             this.Controls.Add(this.menuStrip1);
@@ -209,7 +217,7 @@
         private System.Windows.Forms.CheckBox uniqueCheckBox;
         private System.Windows.Forms.Label lengthLabel;
         private System.Windows.Forms.NumericUpDown felietonLength;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label headerLabel;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem plikToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem openToolStripMenuItem;

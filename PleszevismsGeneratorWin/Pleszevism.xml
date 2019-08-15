@@ -1,4 +1,6 @@
 <Pleszevism xmlns="http://www.pleszevism.com/pleszevism" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+  <MultiText>Soczysty pleszeton</MultiText>
+  <SingleText>Pleszewizm na każdy dzień</SingleText>
 	<part1 xmlns:a="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 		<a:string>Gdyby MZ miało w swych szeregach doświadczonych farmaceutów lub choćby nas zapytało, wiedziałoby, że </a:string>
 		<a:string>Apteki są firmami prywatnymi, przez co </a:string>

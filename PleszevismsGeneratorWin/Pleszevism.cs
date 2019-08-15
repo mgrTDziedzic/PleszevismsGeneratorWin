@@ -12,6 +12,10 @@ namespace PleszevismsGeneratorWin
     public class Pleszevism
     {
         [DataMember]
+        public string SingleText { get; private set; }
+        [DataMember]
+        public string MultiText { get; private set; }
+        [DataMember]
         private List<string> part1;
         [DataMember]
         private List<string> part2;
@@ -68,7 +72,7 @@ namespace PleszevismsGeneratorWin
         {
             if (length > maxPleszetonLength)
             {
-                return "Za mało pleszewizmów w bazie! Maksymalna długość felietonu bez powtórzeń: " + maxPleszetonLength;
+                return "Za mało tekstów w bazie! Maksymalna długość tekstu bez powtórzeń: " + maxPleszetonLength;
             }
 
             string felieton = "";
